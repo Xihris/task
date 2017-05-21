@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_finish: 2017-05-20
+  id_temp_tasks: 1
+  quan_u: 1
+  quan_f: 1
+  comment: MyText
+  inn: 1
+  ogrn: 1
+  id_eau_tasks: 1
+
+two:
+  date_finish: 2017-05-20
+  id_temp_tasks: 1
+  quan_u: 1
+  quan_f: 1
+  comment: MyText
+  inn: 1
+  ogrn: 1
+  id_eau_tasks: 1

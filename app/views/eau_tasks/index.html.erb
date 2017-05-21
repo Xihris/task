@@ -1,0 +1,16 @@
+<div class="container">
+	<% @eaus.each do |eau| %>
+		<table class="table table-condensed">
+			<%= link_to eau.name, edit_eau_task_path(eau) %>
+			<%= l eau.date_end, format: :long%>
+			<% eau.user_id %>
+			<% eau.author_id %>
+				<% @users.each do |user| %>
+					<%= user.login if user.id == eau.user_id %>
+				<% end %>
+				<% @authors.each do |author| %>
+					<%= author.name if author.id == eau.author_id %>
+				<% end %>
+ </table>
+	<% end %>
+</div>

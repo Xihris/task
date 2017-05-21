@@ -1,0 +1,3 @@
+class TasksTemp < ApplicationRecord
+
+end

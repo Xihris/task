@@ -1,0 +1,9 @@
+<div class="container">
+<%= @eau.name %>
+<%= l @eau.date_end, format: :long %>
+<% @eau.author_id %>
+<% @authors.each do |author| %>
+<%= author.name if author.id == @eau.author_id %>
+<% end %>
+<%= link_to 'Edit', edit_eau_task_path(@eau) %>
+</div>

@@ -1,0 +1,40 @@
+ru:
+  activerecord:
+    models:
+      user: 'Исполнитель'
+      unit: 'Единица'
+      author: 'Инициатор'
+      eau_task: 'Задача ИАУ'
+      tasks_temp: 'Временная форма'
+    attributes:
+      user:
+        login: 'Login' 
+        password: 'Пароль'
+        region: 'Регион'
+      unit:
+        date_finish: 'Дата исполнения'
+        id_temp_tasks: 'Код группы'
+        quan_u: 'Количество юриков'
+        quan_f: 'Количество физиков'
+        comment: 'Комментарий'
+        inn: 'ИНН'
+        ogrn: 'ОГРН'
+      author:
+        name: 'Инициатор'
+        phone: 'Телефон'
+        department: 'Подразделение'
+        photo: 'Фото'      
+      eau_task:
+        name: 'Компания'
+        date_start: 'Дата начала'
+        date_end: 'Дата завершения'
+        id_task_temp: 'Код группы'
+        author: 'Инициатор'
+        user: 'Исполнитель'
+      tasks_temp:
+        name: 'Компания'
+        date_start: 'Дата начала'
+        date_end: 'Дата завершения'
+        author: 'Инициатор'
+   
+ 

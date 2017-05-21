@@ -1,0 +1,2 @@
+module EauTasksHelper
+end
