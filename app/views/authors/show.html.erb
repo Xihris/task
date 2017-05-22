@@ -1,2 +1,7 @@
-<h1>Authors#show</h1>
-<p>Find me in app/views/authors/show.html.erb</p>
+<div class="container">
+<% @authors.each do |author| %>
+<button class="btn btn-primary" type="button">
+  <%= author.name %> <span class="badge"><%= author.id %></span>
+</button>
+<% end %>
+</div>
