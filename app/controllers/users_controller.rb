@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    @eau = EauTask.where("user_id = '3'").count
+    @eau = EauTask.all
   end
 
   def new
@@ -23,6 +23,5 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:login, :password, :region)
   end
-
 
 end

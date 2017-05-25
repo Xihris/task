@@ -19,7 +19,6 @@ class EauTasksController < ApplicationController
     @eau = EauTask.find params[:id]
     # @author = Author.find params[:author_id]
 
-
     if @eau.update(eau_params)
       redirect_to eau_tasks_path
     else
