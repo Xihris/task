@@ -1,29 +1,43 @@
 <div class="container">
-<table class="table table-condensed">
-	<thead>
-				<tr>
-					<th>Компания</th>
-					<th>Дата завершения</th>
-					<th>Инициатор</th>
-					<th>Исполнитель</th>
-					<th>Завершить</th>
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>Компания</th>
+				<th>Дата завершения</th>
+				<th>Инициатор</th>
+				<th>Исполнитель</th>
+				<th>Завершить</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<% @eaus.each do |eau| %>
+			  <% if eau.date_end.month == Time.now.month %>
+			    <% @date_result = eau.date_end.day - Time.now.day %>
+			  <% else %>
+			  	<% @date_result = 3 %>
+			  <% end %>
+
+				<tr class=<%= color %>>
+					<td><%= link_to eau.name, edit_eau_task_path(eau) %>
+					</td>	
+					<td>
+						<%= l eau.date_end, format: :long %>
+					</td>
+					<td><% eau.user_id %>
+			    		<% @users.each do |user| %>
+						  <%= user.login if user.id == eau.user_id %>
+						<% end %>
+			  		</td>
+					<td><% eau.author_id %>
+						<% @authors.each do |author| %>
+						  <%= author.name if author.id == eau.author_id %>
+						<% end %>
+					</td>
+					<td><%= link_to "Завершить", "/units/new", :role => "btn", :class=> "btn btn-default" %>
+					</td>
 				</tr>
-	</thead>
-	<tbody>
-	<% @eaus.each do |eau| %>
-	<tr>
-			<td><%= link_to eau.name, edit_eau_task_path(eau) %></td>
-			<td><%= l eau.date_end, format: :long%></td>
-			<td><% eau.user_id %>
-				<% @users.each do |user| %>
-					<%= user.login if user.id == eau.user_id %>
-				<% end %></td>
-			<td><% eau.author_id %>
-				<% @authors.each do |author| %>
-					<%= author.name if author.id == eau.author_id %>
-				<% end %></td>
-			<td><a class="btn btn-default" href="/units/new" role="button">Завершить</a></td>
-	</tr>
-	<% end %>
- </table>
+			<% end %>
+		</tbody>
+	</table>
 </div>

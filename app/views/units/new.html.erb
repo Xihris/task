@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <%= simple_form_for @unit do |f| %>
+        <%= f.input :date_finish, as: :boolean, checked_value: true, unchecked_value: false%>
+        <%= f.input :quan_u %>
+        <%= f.input :quan_f %>
+        <%= f.input :comment %>
+        <%= f.input :inn %>
+        <%= f.input :ogrn %>  
+        <!-- <%= f.input :id_eau_tasks %>  -->
+        <%= f.submit 'Завершить' %>
+      <% end %>
+      
+    <%= @eau.name %>
+      <p><% if @unit.id == nil %></p>
+      <%= "нил" %>
+      <% end %>
+      <% if @unit.id_eau_tasks == nil %>
+        <%= "Нетути айди :(" %>
+      <% else %>
+        <%= @unit.id_eau_tasks %>
+      <% end %>
+    </div>
+  </div>
+</div>

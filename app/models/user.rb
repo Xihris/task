@@ -6,7 +6,6 @@ class User < ApplicationRecord
   # has_many :eau_tasks
 
 
-
   def email_required?
     false
   end

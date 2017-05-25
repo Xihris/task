@@ -31,7 +31,6 @@ class EauTasksController < ApplicationController
     @eaus = EauTask.all
     @authors = Author.all
     @users = User.all
-    # @temps = TasksTemp.all
   end
 
   def show

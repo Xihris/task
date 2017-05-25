@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @eau = EauTask.where("user_id = '3'").count
   end
 
   def new
